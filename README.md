@@ -1,0 +1,2 @@
+# indistry
+ one page template
