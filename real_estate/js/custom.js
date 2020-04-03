@@ -258,6 +258,7 @@ Copyright (c) 2017
 };
 	//show hide login form js
 		$('#login_button').on("click", function(e) {
+			$("#sign_one").slideUp("slow");
 			$('#login_one').slideToggle(1000);
 			e.stopPropagation(); 
 		});
@@ -266,7 +267,34 @@ Copyright (c) 2017
 		if(!(e.target.closest('#login_one'))){	
 			$("#login_one").slideUp("slow");   		
 		}
-   });
+	});
+	
+
+	//show hide login form js
+	$('#login_butto').on("click", function (e) {
+		$("#sign_one").slideUp("slow");
+		$('#login_one').slideToggle(1000);
+		e.stopPropagation();
+	});
+
+	$(document).click(function (e) {
+		if (!(e.target.closest('#login_one'))) {
+			$("#login_one").slideUp("slow");
+		}
+	});
+
+	//show hide sign form js
+	$('#signup_button').on("click", function (e) {
+		$("#login_one").slideUp("slow");  
+		$('#sign_one').slideToggle(1000);
+		e.stopPropagation();
+	});
+
+	$(document).click(function (e) {
+		if (!(e.target.closest('#sign_one'))) {
+			$("#sign_one").slideUp("slow");
+		}
+	});
    
    
    //Rang Slider
